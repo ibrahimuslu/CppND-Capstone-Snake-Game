@@ -30,6 +30,51 @@ In this project, you can build your own C++ application or extend this Snake gam
 3. Compile: `cmake .. && make`
 4. Run it: `./SnakeGame`.
 
+## Game Extensions 
+1. Classic snake game extended with 2 other objects other than "Food": "Trap" and "Wall".
+2. When you hit the "Trap", you will loose one score and the body will shrink one unit. 
+3. When you hit the "Wall", you will loose all scores and snake will die and Game will over. 
+4. "Space" key will pause the game and make run after pause.
+5. When the game over you can continue by pressing "Space" key.
+6. "Esc" key will close the window and finish the game. 
+7. Games will be logged into "gameLog.txt" in the same level directory of the game started. 
+8. There is two level of difficulty "easy" and "hard". 
+9. You can start the game with command line argument as the following
+```
+./SnakeGame hard
+```
+9. "easy" is the default difficulty and has 8 foods and 1 trap and 1 wall
+10. "hard" has 1 food 8 traps and 4 walls
+
+
+## Project Criteria
+
+### Loops, Functions, I/O
+| _Criteria_ | _Comments_ | 
+|---------|-----------|
+| The project demonstrates an understanding of C++ functions and control structures. | The title changes according to the state of the game and the update of the game according to the objects hit are done in functions of the objects |
+| The project reads data from a file and process the data, or the program writes data to a file.	| Program logs the game results and duration to the gameLog.txt file  |
+| The project accepts user input and processes the input.	|  The difficulty set via the command line arguments.  |
+
+## Object Oriented Programming
+
+| _Criteria_ | _Comments_ | 
+|---------|-----------|
+| The project uses Object Oriented Programming techniques.| The project code is organized into classes with class attributes to hold the data, and class methods to perform tasks. | 
+| Classes use appropriate access specifiers for class members. | All class data members are explicitly specified as public, protected, or private. |
+| Classes abstract implementation details from their interfaces. | The Food, Wall, and Trap objects are derived from the Object abstract class|
+| Classes follow an appropriate inheritance hierarchy. | Inheritance hierarchies are logical. Composition is used instead of inheritance when appropriate. Abstract classes are composed of pure virtual functions. Override functions are specified. |
+| Derived class functions override virtual base class functions.| Objects derived from abstract classes virtual functions |  
+
+## Memory Management
+
+| _Criteria_ | _Comments_ | 
+|---------|-----------|
+| The project makes use of references in function declarations. | At least two variables are defined as references, or two functions use pass-by-reference in the project code. |
+| The project uses destructors appropriately. | At least one class that uses unmanaged dynamically allocated memory, along with any class that otherwise needs to modify state upon the termination of an object, uses a destructor. |
+| The project uses scope / Resource Acquisition Is Initialization (RAII) where appropriate. | All the derived objects meet the rule of five and RAII |
+| The project follows the Rule of 5. | All the derived objects meet the rule of five and RAII | 
+| The project uses smart pointers instead of raw pointers. | The Objects are used with unique pointer in the Game | 
 
 ## CC Attribution-ShareAlike 4.0 International
 
